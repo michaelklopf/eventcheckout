@@ -1,0 +1,82 @@
+# create new app with
+meteor create checkout
+
+# add packages
+meteor add mizzao:bootstrap-3
+meteor add underscore
+
+# create basic structure
+mkdir client server public lib
+
+# code in server only runs on server
+# code in client only runs on client
+# public holds images, fonts
+# lib is loaded before everything
+
+# create basic files
+cd client
+touch main.html main.js
+
+# all main files are loaded after everything
+
+# create templates for client side
+mkdir templates
+
+# more about spacebars templates here
+# https://github.com/meteor/meteor/blob/devel/packages/spacebars/README.md
+# the js files are called helpers
+
+# update meteor to newest release
+meteor update --release 1.0.1
+
+# include a template in your file like this
+# {{> templateName}}
+
+# template expression
+# {{title}}
+
+# block helpers
+# {{#if}}…{{/if}} {{#each}}…{{/each}}
+
+# templates get logic with template's helpers
+
+# collections - holds data server side
+
+cd ../lib
+mkdir collections
+
+# make the collection available for the whole app with removing the var keyword
+# on the server it is the real mongoDB representation
+# on the client it's only a smaller subset of the data available
+
+# call mongo shell with (preferably a new tab)
+meteor mongo
+
+# on server side this will write directly to mongo
+# CollectionName.insert() or CollectionName.update()
+
+# when hosting on meteor.com get access to db and logs with
+# meteor mongo myApp
+# meteor logs myApp
+
+# creating collections on client side results in local/client db (mini-mongo)
+
+# reset your database, but be careful!
+!!! meteor reset !!!
+
+# start the app itself with the command
+meteor
+
+# find() returns a cursor, a reactive data source
+# log the contents of the cursor in an array with fetch()
+
+# deactivate autopublish to prevent the push of the whole db to the client
+meteor remove autopublish
+
+# create publications on server side
+cd ../server
+
+# publish data from the server with the function Meteor.publish() (DDP protocol)
+# on the client we subscribe with Meteor.subscribe()
+
+# make the app secure with publishing only what the client is allowed to see
