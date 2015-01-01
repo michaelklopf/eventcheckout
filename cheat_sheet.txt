@@ -80,3 +80,11 @@ cd ../server
 # on the client we subscribe with Meteor.subscribe()
 
 # make the app secure with publishing only what the client is allowed to see
+
+# add the router to the app
+meteor add iron:router
+
+# restart app when adding new packages
+
+# add spinner for loading screen
+meteor add sacha:spin
