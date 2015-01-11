@@ -61,6 +61,19 @@ meteor mongo
 
 # creating collections on client side results in local/client db (mini-mongo)
 
+# open mongo in different terminal tab with
+meteor mongo
+
+# in mongo terminal find anything with
+# db.events.find();
+# or insert
+# db.events.insert({title: "A new event"});
+
+# in browser shell with autopublish
+# Events.find();
+# Events.find().count();
+# Events.insert({title: "A second event"});
+
 # reset your database, but be careful!
 !!! meteor reset !!!
 
@@ -88,3 +101,18 @@ meteor add iron:router
 
 # add spinner for loading screen
 meteor add sacha:spin
+
+# add user account management
+meteor add ian:accounts-ui-bootstrap-3
+meteor add accounts-password
+
+# for non-reactive changes use observe
+# Events.find().observe({
+#   added: function(event) {
+#   },
+#   changed: function(event) {
+#   },
+#   removed: function(event) {
+#   }
+# });
+# Reactivity is limited to certain areas of code, called computations
