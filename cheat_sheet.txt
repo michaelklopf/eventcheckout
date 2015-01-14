@@ -116,3 +116,9 @@ meteor add accounts-password
 #   }
 # });
 # Reactivity is limited to certain areas of code, called computations
+
+# remove insecure to prevent users from adding events without being logged in
+meteor remove insecure
+
+# for formatting dates add
+meteor add mrt:moment
