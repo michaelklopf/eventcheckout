@@ -11,3 +11,10 @@ Template.eventSubmit.events({
     Router.go('eventPage', event);
   }
 });
+
+Template.eventSubmit.rendered = function() {
+  $('.datetimepicker').datetimepicker({
+    format : 'DD.MM.YYYY HH:mm',
+    use24hours: true
+  });
+}

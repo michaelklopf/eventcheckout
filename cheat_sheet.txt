@@ -121,4 +121,12 @@ meteor add accounts-password
 meteor remove insecure
 
 # for formatting dates add
+# help https://www.discovermeteor.com/blog/spacebars-secrets-exploring-meteor-new-templating-engine/
 meteor add mrt:moment
+
+# adding date picker and delete it again
+meteor add rajit:bootstrap3-datepicker
+meteor remove rajit:bootstrap3-datepicker
+
+# add date time picker
+meteor add tsega:bootstrap3-datetimepicker

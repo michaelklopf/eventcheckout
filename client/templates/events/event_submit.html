@@ -9,7 +9,10 @@
     <div class="form-group">
       <label class="control-label" for="eventDate">Event Date</label>
       <div class="controls">
-        <input name="eventDate" id="eventDate" type="date" value="" placeholder="Date of event" class="form-control"/>
+        <div class="input-group datetimepicker">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input name="eventDate" id="eventDate" placeholder="Date of event" class="set-due-date form-control" type="text"/>
+        </div>
       </div>
     </div>
     <input type="submit" value="Submit New Event" class="btn btn-primary"/>
