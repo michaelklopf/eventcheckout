@@ -14,12 +14,6 @@ Template.eventSubmit.events({
       if (error)
         return alert(error.reason);
 
-      /* Ignore duplicates code
-      // show this result but route anyway
-      if (result.eventExists)
-        alert('This link has already been posted');
-      */
-
       Router.go('eventPage', {_id: result._id});
     });
   }
