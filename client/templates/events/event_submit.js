@@ -2,9 +2,11 @@ Template.eventSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
 
+    var date = moment($(e.target).find('[name=eventDate]').val(), 'DD.MM.YYYY hh:mm')._d;
+
     var event = {
-      url: $(e.target).find('[name=title]').val(),
-      eventDate: $(e.target).find('[name=eventDate]').val()
+      title: $(e.target).find('[name=title]').val(),
+      eventDate: date
     };
 
     event._id = Events.insert(event);
@@ -15,6 +17,7 @@ Template.eventSubmit.events({
 Template.eventSubmit.rendered = function() {
   $('.datetimepicker').datetimepicker({
     format : 'DD.MM.YYYY HH:mm',
-    use24hours: true
+    use24hours: true,
+    sideBySide: true
   });
 }

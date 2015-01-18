@@ -130,3 +130,6 @@ meteor remove rajit:bootstrap3-datepicker
 
 # add date time picker
 meteor add tsega:bootstrap3-datetimepicker
+
+# deploy to meteor with command
+meteor deploy checkout.meteor.com
