@@ -132,4 +132,8 @@ meteor remove rajit:bootstrap3-datepicker
 meteor add tsega:bootstrap3-datetimepicker
 
 # deploy to meteor with command
-meteor deploy checkout.meteor.com
+meteor deploy eventcheckout.meteor.com
+
+# currentUser helper is provided to us by the accounts package
+
+# use the audit-argument-checks package to check JS object against pattern
