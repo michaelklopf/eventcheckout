@@ -1,7 +1,31 @@
 <template name="eventsList">
-  <div class="events">
-    {{#each events}}
-      {{> eventItem}}
-    {{/each}}
+  <div role="tabpanel">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#currentEvents" aria-controls="currentEvents" role="tab" data-toggle="tab">Current Events</a></li>
+      <li role="presentation"><a href="#futureEvents" aria-controls="futureEvents" role="tab" data-toggle="tab">Future Events</a></li>
+      <li role="presentation"><a href="#allEvents" aria-controls="events" role="tab" data-toggle="tab">All Events</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="events tab-pane active" id="currentEvents">
+        {{#each currentEvents}}
+          {{> eventItem}}
+        {{/each}}
+      </div>
+      <div role="tabpanel" class="events tab-pane" id="futureEvents">
+        {{#each futureEvents}}
+          {{> eventItem}}
+        {{/each}}
+      </div>
+      <div role="tabpanel" class="events tab-pane" id="allEvents">
+        {{#each events}}
+          {{> eventItem}}
+        {{/each}}
+      </div>
+    </div>
+
   </div>
 </template>

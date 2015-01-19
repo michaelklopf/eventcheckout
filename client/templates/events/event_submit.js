@@ -6,7 +6,7 @@ Template.eventSubmit.events({
 
     var event = {
       title: $(e.target).find('[name=title]').val(),
-      eventDate: date
+      eventDate: new Date(date)
     };
 
     Meteor.call('eventInsert', event, function(error, result) {
