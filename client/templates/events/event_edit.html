@@ -1,0 +1,22 @@
+<template name="eventEdit">
+  <form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+        <input name="title" id="title" type="text" value="{{title}}" placeholder="Eventname" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="eventDate">Event Date</label>
+      <div class="controls">
+        <div class="input-group datetimepicker">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input name="eventDate" id="eventDate" value="{{formatEventDateWithoutWeekday eventDate}}" placeholder="Date of event" class="set-due-date form-control" type="text"/>
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete event</a>
+  </form>
+</template>
