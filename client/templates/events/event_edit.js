@@ -14,7 +14,7 @@ Template.eventEdit.events({
     Events.update(currentEventId, {$set: eventProperties}, function(error) {
       if (error) {
         // display the error to the user
-        alert(error.reason);
+        throwError(error.reason);
       } else {
         Router.go('eventPage', {_id: currentEventId});
       }

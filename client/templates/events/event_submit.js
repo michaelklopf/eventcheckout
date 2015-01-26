@@ -12,7 +12,7 @@ Template.eventSubmit.events({
     Meteor.call('eventInsert', event, function(error, result) {
       // display the error to the user and abort
       if (error)
-        return alert(error.reason);
+        return throwError(error.reason);
 
       Router.go('eventPage', {_id: result._id});
     });

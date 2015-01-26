@@ -140,3 +140,5 @@ meteor deploy eventcheckout.meteor.com --delete
 # currentUser helper is provided to us by the accounts package
 
 # use the audit-argument-checks package to check JS object against pattern
+
+# multiple templates in one file are allowed, used in errors
