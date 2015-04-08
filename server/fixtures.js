@@ -62,8 +62,15 @@ if (Events.find().count() === 0) {
     list_items: {
       0: {
          price: '1',
-         unit: '€',
+         unit: 'euro',
          description: 'Stuffed teddy bear',
+         customerId: '',
+         cashierId: ''
+      },
+      1: {
+         price: '2.5',
+         unit: 'euro',
+         description: 'Sweatshirt',
          customerId: '',
          cashierId: ''
       }

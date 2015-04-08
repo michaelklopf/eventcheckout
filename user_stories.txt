@@ -1,0 +1,7 @@
+As an event manager, I create events.
+As an event manager, I manage lists.
+As an event manager, I set up registers.
+
+As a seller, I create lists.
+
+As a cashier, I enter list items.
