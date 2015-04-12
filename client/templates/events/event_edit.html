@@ -7,6 +7,15 @@
         <span class="help-block">{{errorMessage 'title'}}</span>
       </div>
     </div>
+
+    <div class="form-group {{errorClass 'shareInPercent'}}">
+      <label class="control-label" for="shareInPercent">Share you take from sellers (in % for you)</label>
+      <div class="controls">
+        <input name="shareInPercent" id="shareInPercent" type="number" value="{{shareInPercent}}" placeholder="Share in percent" class="form-control"/>
+        <span class="help-block">{{errorMessage 'shareInPercent'}}</span>
+      </div>
+    </div>
+
     <div class="form-group {{errorClass 'eventDate'}}">
       <label class="control-label" for="eventDate">Event Date</label>
       <div class="controls">
@@ -17,8 +26,10 @@
         <span class="help-block">{{errorMessage 'eventDate'}}</span>
       </div>
     </div>
+
     <input type="submit" value="Submit" class="btn btn-primary submit"/>
     <hr/>
+    
     <a class="btn btn-danger delete" href="#">Delete event</a>
   </form>
 </template>

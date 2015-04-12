@@ -19,17 +19,20 @@ Template.eventEdit.events({
 
     var eventProperties = {
       title: $(e.target).find('[name=title]').val(),
+      shareInPercent: $(e.target).find('[name=shareInPercent]').val(),
       eventDate: $(e.target).find('[name=eventDate]').val()
     }
 
     var errors = validateEvent(eventProperties);
-    if (errors.title || errors.eventDate)
+    if (errors.title || errors.shareInPercent || errors.eventDate)
       return Session.set('eventEditErrors', errors);
 
     var date = moment(eventProperties.eventDate, 'DD.MM.YYYY hh:mm')._d;
+    var share = parseInt(eventProperties.shareInPercent);
 
     var event = {
       title: eventProperties.title,
+      shareInPercent: share,
       eventDate: new Date(date)
     }
 

@@ -39,7 +39,7 @@ if (Events.find().count() === 0) {
       { id: kkId }
     ],
     author: michael.profile.name,
-    feeInPercent: 0.20,
+    shareInPercent: 20,
     //eventDate: 'Sun Sep 28 2014 11:00:00 GMT+0200 (CEST)'
     eventDate: date1
   });
@@ -48,7 +48,7 @@ if (Events.find().count() === 0) {
     title: 'Basar "Die Arche" Frühjahr 2015',
     userId: mkId,
     author: michael.profile.name,
-    feeInPercent: 0.20,
+    shareInPercent: 20,
     //eventDate: 'Sun Mar 29 2015 11:00:00 GMT+0200 (CEST)'
     eventDate: date2
   });
@@ -57,7 +57,7 @@ if (Events.find().count() === 0) {
     title: 'Flohmarkt BRK Rosenmesse 2015',
     userId: jkId,
     author: julia.profile.name,
-    feeInPercent: 0.20,
+    shareInPercent: 20,
     //eventDate: 'Sun Jun 21 2015 10:00:00 GMT+0200 (CEST)'
     eventDate: date3
   });
@@ -66,7 +66,7 @@ if (Events.find().count() === 0) {
     title: 'Flohmarkt Weihnachten',
     userId: jkId,
     author: julia.profile.name,
-    feeInPercent: 0.20,
+    shareInPercent: 20,
     //eventDate: 'Sun Jun 21 2015 10:00:00 GMT+0200 (CEST)'
     eventDate: date4
   });
