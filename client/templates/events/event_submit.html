@@ -7,11 +7,11 @@
         <span class="help-block">{{errorMessage 'title'}}</span>
       </div>
     </div>
-    <div class="form-group {{errorClass 'feeInPercent'}}">
-      <label class="control-label" for="feeInPercent">General fee for all participants (earning split in % for the organizer)</label>
+    <div class="form-group {{errorClass 'shareInPercent'}}">
+      <label class="control-label" for="shareInPercent">Share you take from sellers (in % for you)</label>
       <div class="controls">
-        <input name="feeInPercent" id="feeInPercent" type="text" value="" placeholder="Fee in percent" class="form-control"/>
-        <span class="help-block">{{errorMessage 'feeInPercent'}}</span>
+        <input name="shareInPercent" id="shareInPercent" type="number" value="" placeholder="Share in percent" class="form-control"/>
+        <span class="help-block">{{errorMessage 'shareInPercent'}}</span>
       </div>
     </div>
     <div class="form-group {{errorClass 'eventDate'}}">

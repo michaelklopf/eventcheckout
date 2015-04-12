@@ -18,25 +18,34 @@ Template.eventSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
 
+    // get event input data
     var eventProperties = {
       title: $(e.target).find('[name=title]').val(),
+      shareInPercent: $(e.target).find('[name=shareInPercent]').val(),
       eventDate: $(e.target).find('[name=eventDate]').val()
     }
 
+    // when date is empty add current date
     if (eventProperties.eventDate === "")
       eventProperties.eventDate = moment().format('DD.MM.YYYY hh:mm');
 
+    // validate inputs
     var errors = validateEvent(eventProperties);
-    if (errors.title || errors.eventDate)
+    if (errors.title || errors.shareInPercent || errors.eventDate)
       return Session.set('eventSubmitErrors', errors);
 
+    // pack date property in new form, the same for the share
     var date = moment(eventProperties.eventDate, 'DD.MM.YYYY hh:mm')._d;
+    var share = parseInt(eventProperties.shareInPercent);
 
+    // create event object from properties
     var event = {
       title: eventProperties.title,
+      shareInPercent: share,
       eventDate: new Date(date)
     };
 
+    // send event object to insert method
     Meteor.call('eventInsert', event, function(error, result) {
       // display the error to the user and abort
       if (error)
