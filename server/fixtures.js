@@ -8,21 +8,26 @@ if (Events.find().count() === 0) {
 
   // create a couple new users
   var mkId = Meteor.users.insert({
+    services : { "password" : { "bcrypt" : "$2a$10$hf2G504mvL.vW5bWBcr5YuYAgGBtJfRHWndQ9mH3KV2t7MTt234qu" }},
+    username : "michael",
     profile: { name: 'michael' }
   });
   var michael = Meteor.users.findOne(mkId);
 
   var jkId = Meteor.users.insert({
+    username : "julia",
     profile: { name: 'julia' }
   });
   var julia = Meteor.users.findOne(jkId);
 
   var kkId = Meteor.users.insert({
+    username : "klaus",
     profile: { name: 'klaus' }
   });
   var klaus = Meteor.users.findOne(kkId);
 
   var tId = Meteor.users.insert({
+    username : "thore",
     profile: { name: 'thore' }
   });
   var thore = Meteor.users.findOne(tId);
@@ -31,7 +36,6 @@ if (Events.find().count() === 0) {
     title: 'Basar "Die Arche" Herbst 2014',
     userId: mkId,
     admins: [
-      { id: mkId },
       { id: jkId }
     ],
     cashiers: [
@@ -56,6 +60,14 @@ if (Events.find().count() === 0) {
   var ev3id = Events.insert({
     title: 'Flohmarkt BRK Rosenmesse 2015',
     userId: jkId,
+    admins: [
+      { id: mkId }
+    ],
+    cashiers: [
+      { id: tId },
+      { id: kkId },
+      { id: mkId }
+    ],
     author: julia.profile.name,
     shareInPercent: 20,
     //eventDate: 'Sun Jun 21 2015 10:00:00 GMT+0200 (CEST)'
