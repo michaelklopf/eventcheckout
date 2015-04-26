@@ -66,4 +66,15 @@ Template.eventSubmit.rendered = function() {
     use24hours: true,
     sideBySide: true
   });
+
+  // Initialise tags input
+  $('.tags').tagsinput({
+      /*
+      typeahead: {
+          source: function(query) {
+              return ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo'];
+          }
+      }
+      */
+  });
 }

@@ -19,12 +19,9 @@
     <div class="form-group {{errorClass 'eventManagers'}}">
       <label class="control-label" for="eventManagers">Add event managers to your event, helping you.</label>
       <div class="controls">
-        <input name="eventManagers" id="eventManagers" type="text" value="" placeholder="Event Manager" class="form-control"/>
+        <input name="eventManagers" id="eventManagers" type="text" size="200%" value="" placeholder="Event Manager" class="form-control tags"/>
         <span class="help-block">{{errorMessage 'eventManagers'}}</span>
       </div>
-      <button type="button" class="btn btn-default btn-default" id="addEventManagerInput">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add another event manager
-      </button>
     </div>
 
     <div class="form-group {{errorClass 'eventDate'}}">
