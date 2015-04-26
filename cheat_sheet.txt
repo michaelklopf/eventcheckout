@@ -142,3 +142,9 @@ meteor deploy eventcheckout.meteor.com --delete
 # use the audit-argument-checks package to check JS object against pattern
 
 # multiple templates in one file are allowed, used in errors
+
+# list installed packages
+meteor list
+
+# for tags add
+meteor add ajduke:bootstrap-tagsinput

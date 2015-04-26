@@ -14,3 +14,4 @@ accounts-password
 mrt:moment
 tsega:bootstrap3-datetimepicker
 maxharris9:meteor-bootstrap-slider
+ajduke:bootstrap-tagsinput

@@ -53,6 +53,10 @@ Template.eventSubmit.events({
 
       Router.go('eventPage', {_id: result._id});
     });
+  },
+
+  'click #addEventManagerInput': function(e) {
+    console.log("Pressed button");
   }
 });
 
