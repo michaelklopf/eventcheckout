@@ -15,18 +15,21 @@ if (Events.find().count() === 0) {
   var michael = Meteor.users.findOne(mkId);
 
   var jkId = Meteor.users.insert({
+    services : { "password" : { "bcrypt" : "$2a$10$hf2G504mvL.vW5bWBcr5YuYAgGBtJfRHWndQ9mH3KV2t7MTt234qu" }},
     username : "julia",
     profile: { name: 'julia' }
   });
   var julia = Meteor.users.findOne(jkId);
 
   var kkId = Meteor.users.insert({
+    services : { "password" : { "bcrypt" : "$2a$10$hf2G504mvL.vW5bWBcr5YuYAgGBtJfRHWndQ9mH3KV2t7MTt234qu" }},
     username : "klaus",
     profile: { name: 'klaus' }
   });
   var klaus = Meteor.users.findOne(kkId);
 
   var tId = Meteor.users.insert({
+    services : { "password" : { "bcrypt" : "$2a$10$hf2G504mvL.vW5bWBcr5YuYAgGBtJfRHWndQ9mH3KV2t7MTt234qu" }},
     username : "thore",
     profile: { name: 'thore' }
   });
