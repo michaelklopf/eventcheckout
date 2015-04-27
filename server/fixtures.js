@@ -35,8 +35,8 @@ if (Events.find().count() === 0) {
   var ev1id = Events.insert({
     title: 'Basar "Die Arche" Herbst 2014',
     userId: mkId,
-    admins: [
-      { id: jkId }
+    eventManagers: [
+      julia.username
     ],
     cashiers: [
       { id: tId },
@@ -60,8 +60,8 @@ if (Events.find().count() === 0) {
   var ev3id = Events.insert({
     title: 'Flohmarkt BRK Rosenmesse 2015',
     userId: jkId,
-    admins: [
-      { id: mkId }
+    eventManagers: [
+      michael.username
     ],
     cashiers: [
       { id: tId },

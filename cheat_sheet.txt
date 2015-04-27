@@ -149,3 +149,6 @@ meteor list
 # for tags add
 meteor add ajduke:bootstrap-tagsinput
 meteor add mrt:bootstrap3-typeahead
+
+# nice to know
+# https://dweldon.silvrback.com/common-mistakes

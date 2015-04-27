@@ -22,6 +22,7 @@ Template.eventSubmit.events({
     var eventProperties = {
       title: $(e.target).find('[name=title]').val(),
       shareInPercent: $(e.target).find('[name=shareInPercent]').val(),
+      eventManagers: $("#eventManagers").tagsinput('items'),
       eventDate: $(e.target).find('[name=eventDate]').val()
     }
 
@@ -42,6 +43,7 @@ Template.eventSubmit.events({
     var event = {
       title: eventProperties.title,
       shareInPercent: share,
+      eventManagers: $("#eventManagers").tagsinput('items'),
       eventDate: new Date(date)
     };
 
