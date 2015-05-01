@@ -32,7 +32,7 @@ Template.eventSubmit.events({
 
     // validate inputs
     var errors = validateEvent(eventProperties);
-    if (errors.title || errors.shareInPercent || errors.eventDate)
+    if (errors.title || errors.shareInPercent || errors.eventDate || errors.eventManagers)
       return Session.set('eventSubmitErrors', errors);
 
     // pack date property in new form, the same for the share
