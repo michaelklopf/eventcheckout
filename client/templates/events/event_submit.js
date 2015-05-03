@@ -23,6 +23,7 @@ Template.eventSubmit.events({
       title: $(e.target).find('[name=title]').val(),
       shareInPercent: $(e.target).find('[name=shareInPercent]').val(),
       eventManagers: $("#eventManagers").tagsinput('items'),
+      cashiers: $("#cashiers").tagsinput('items'),
       eventDate: $(e.target).find('[name=eventDate]').val()
     }
 
@@ -32,7 +33,7 @@ Template.eventSubmit.events({
 
     // validate inputs
     var errors = validateEvent(eventProperties);
-    if (errors.title || errors.shareInPercent || errors.eventDate || errors.eventManagers)
+    if (errors.title || errors.shareInPercent || errors.eventDate || errors.eventManagers || errors.cashiers)
       return Session.set('eventSubmitErrors', errors);
 
     // pack date property in new form, the same for the share
@@ -44,6 +45,7 @@ Template.eventSubmit.events({
       title: eventProperties.title,
       shareInPercent: share,
       eventManagers: $("#eventManagers").tagsinput('items'),
+      cashiers: $("#cashiers").tagsinput('items'),
       eventDate: new Date(date)
     };
 
@@ -55,10 +57,6 @@ Template.eventSubmit.events({
 
       Router.go('eventPage', {_id: result._id});
     });
-  },
-
-  'click #addEventManagerInput': function(e) {
-    console.log("Pressed button");
   }
 });
 

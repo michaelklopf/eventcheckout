@@ -42,8 +42,8 @@ if (Events.find().count() === 0) {
       julia.username
     ],
     cashiers: [
-      { id: tId },
-      { id: kkId }
+      thore.username,
+      klaus.username
     ],
     author: michael.profile.name,
     shareInPercent: 20,
@@ -67,9 +67,9 @@ if (Events.find().count() === 0) {
       michael.username
     ],
     cashiers: [
-      { id: tId },
-      { id: kkId },
-      { id: mkId }
+      thore.username,
+      klaus.username,
+      michael.username
     ],
     author: julia.profile.name,
     shareInPercent: 20,

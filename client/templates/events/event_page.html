@@ -7,5 +7,27 @@
         {{shareInPercent}}% share
       </div>
     </div>
+    {{#if ownEvent}}
+    <div>
+      Event Managers:
+      <ul class="list-group">
+        <li class="list-group-item">{{author}}</li>
+        {{#each eventManagers}}
+          <li class="list-group-item">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+    {{#if beingCashier}}
+    <div>
+      Cashiers:
+      <ul class="list-group">
+        <li class="list-group-item">{{author}}</li>
+        {{#each cashiers}}
+          <li class="list-group-item">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
   </div>
 </template>

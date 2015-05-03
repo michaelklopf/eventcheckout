@@ -1,8 +1,8 @@
 Template.eventItem.helpers({
   ownEvent: function() {
-    var findAdmin = _.find(this.admins, function(admin) { return admin.id == Meteor.userId(); });
-    if (findAdmin !== undefined) {
-      return findAdmin.id === Meteor.userId();
+    var findEventManager = _.find(this.eventManagers, function(eventManager) { return eventManager == Meteor.user().username; });
+    if (findEventManager !== undefined) {
+      return findEventManager === Meteor.user().username;
     }
     return this.userId === Meteor.userId();
   }
