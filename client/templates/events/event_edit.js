@@ -20,11 +20,13 @@ Template.eventEdit.events({
     var eventProperties = {
       title: $(e.target).find('[name=title]').val(),
       shareInPercent: $(e.target).find('[name=shareInPercent]').val(),
+      eventManagers: $("#eventManagers").tagsinput('items'),
+      cashiers: $("#cashiers").tagsinput('items'),
       eventDate: $(e.target).find('[name=eventDate]').val()
     }
 
     var errors = validateEvent(eventProperties);
-    if (errors.title || errors.shareInPercent || errors.eventDate)
+    if (errors.title || errors.shareInPercent || errors.eventDate || errors.eventManagers || errors.cashiers)
       return Session.set('eventEditErrors', errors);
 
     var date = moment(eventProperties.eventDate, 'DD.MM.YYYY hh:mm')._d;
@@ -33,6 +35,8 @@ Template.eventEdit.events({
     var event = {
       title: eventProperties.title,
       shareInPercent: share,
+      eventManagers: $("#eventManagers").tagsinput('items'),
+      cashiers: $("#cashiers").tagsinput('items'),
       eventDate: new Date(date)
     }
 
@@ -62,5 +66,16 @@ Template.eventEdit.rendered = function() {
     format : 'DD.MM.YYYY HH:mm',
     use24hours: true,
     sideBySide: true
+  });
+
+  // Initialise tags input
+  $('.tags').tagsinput({
+      /*
+      typeahead: {
+          source: function(query) {
+              return ['Amsterdam', 'Washington', 'Sydney', 'Beijing', 'Cairo'];
+          }
+      }
+      */
   });
 };

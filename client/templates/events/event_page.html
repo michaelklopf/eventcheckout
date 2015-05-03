@@ -1,6 +1,7 @@
 <template name="eventPage">
   <div class="event-content">
     <h3>{{title}} <small>{{formatEventDate eventDate}}</small></h3>
+    {{#if ownEvent}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="{{shareInPercent}}"
         aria-valuemin="0" aria-valuemax="100" style="width: {{shareInPercent}}%;">
