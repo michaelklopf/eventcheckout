@@ -3,5 +3,9 @@ Meteor.publish('events', function(author) {
 });
 
 Meteor.publish("users", function () {
-    return Meteor.users.find({}, {fields: {'username': 1}});
+  return Meteor.users.find({}, {fields: {'username': 1}});
+});
+
+Meteor.publish("lists", function() {
+  return Lists.find();
 });

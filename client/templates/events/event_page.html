@@ -30,5 +30,14 @@
       </ul>
     </div>
     {{/if}}
+    <div>
+      Lists:
+      <ul class="list-group">
+        {{#each lists}}
+          <li class="list-group-item">{{listId}}. {{author}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <input type="submit" value="Add New List" class="btn btn-primary"/>
   </div>
 </template>

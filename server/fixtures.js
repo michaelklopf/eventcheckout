@@ -89,8 +89,7 @@ if (Events.find().count() === 0) {
   Lists.insert({
     listId: 1,
     eventId: ev1id,
-    userId: michael._id,
-    author: michael.profile.name,
+    author: michael.username,
     submitted: new Date(now - 5 * 3600 * 1000),
     list_items: [
       {
@@ -111,34 +110,37 @@ if (Events.find().count() === 0) {
   });
 
   Lists.insert({
-    listId: 1,
+    listId: 2,
     eventId: ev1id,
-    userId: julia._id,
-    author: julia.profile.name,
+    author: julia.username,
+    submitted: new Date(now - 5 * 3600 * 1000)
+  });
+  
+  Lists.insert({
+    listId: 3,
+    eventId: ev1id,
+    author: michael.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 
   Lists.insert({
     listId: 1,
     eventId: ev2id,
-    userId: michael._id,
-    author: michael.profile.name,
+    author: michael.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 
   Lists.insert({
     listId: 1,
     eventId: ev3id,
-    userId: julia._id,
-    author: julia.profile.name,
+    author: julia.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 
   Lists.insert({
     listId: 1,
     eventId: ev4id,
-    userId: julia._id,
-    author: julia.profile.name,
+    author: julia.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 }
