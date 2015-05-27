@@ -32,11 +32,23 @@
     {{/if}}
     <div>
       Lists:
-      <ul class="list-group">
+      {{#if ownEvent}}
+      <div class="list-group">
         {{#each lists}}
-          <li class="list-group-item">{{listId}}. {{author}}</li>
+          <a href="{{pathFor 'listPage'}}" class="list-group-item">{{author}}</a>
+        {{else}}
+          <li class="list-group-item">No lists created yet.</li>
         {{/each}}
-      </ul>
+      </div>
+      {{else}}
+      <div class="list-group">
+        {{#each ownLists}}
+          <a href="{{pathFor 'listPage'}}" class="list-group-item">{{author}}</a>
+        {{else}}
+          <li class="list-group-item">No lists created yet.</li>
+        {{/each}}
+      </div>
+      {{/if}}
     </div>
     <input type="submit" value="Add New List" class="btn btn-primary"/>
   </div>

@@ -87,7 +87,7 @@ if (Events.find().count() === 0) {
   });
 
   Lists.insert({
-    listId: 1,
+    //listId: 1,
     eventId: ev1id,
     author: michael.username,
     submitted: new Date(now - 5 * 3600 * 1000),
@@ -110,37 +110,44 @@ if (Events.find().count() === 0) {
   });
 
   Lists.insert({
-    listId: 2,
+    //listId: 2,
     eventId: ev1id,
     author: julia.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
-  
+
   Lists.insert({
-    listId: 3,
+    //listId: 3,
     eventId: ev1id,
     author: michael.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 
   Lists.insert({
-    listId: 1,
+    //listId: 1,
     eventId: ev2id,
     author: michael.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 
   Lists.insert({
-    listId: 1,
+    //listId: 1,
     eventId: ev3id,
     author: julia.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 
   Lists.insert({
-    listId: 1,
+    //listId: 1,
     eventId: ev4id,
     author: julia.username,
+    submitted: new Date(now - 5 * 3600 * 1000)
+  });
+
+  Lists.insert({
+    //listId: 1,
+    eventId: ev4id,
+    author: michael.username,
     submitted: new Date(now - 5 * 3600 * 1000)
   });
 }
