@@ -19,7 +19,7 @@
     <div class="form-group {{errorClass 'eventManagers'}}">
       <label class="control-label" for="eventManagers">Add event managers to your event (with entering their username)</label>
       <div class="controls">
-        <input name="eventManagers" id="eventManagers" type="text" value="" placeholder="Event Manager" class="form-control tags"/>
+        <input name="eventManagers" id="eventManagers" type="text" value="{{eventManagers}}" placeholder="Event Manager" class="form-control tags"/>
         <span class="help-block">{{errorMessage 'eventManagers'}}</span>
       </div>
     </div>
@@ -27,7 +27,7 @@
     <div class="form-group {{errorClass 'cashiers'}}">
       <label class="control-label" for="cashiers">Add cashiers to your event (with entering their username)</label>
       <div class="controls">
-        <input name="cashiers" id="cashiers" type="text" value="" placeholder="Cashiers" class="form-control tags"/>
+        <input name="cashiers" id="cashiers" type="text" value="{{cashiers}}" placeholder="Cashiers" class="form-control tags"/>
         <span class="help-block">{{errorMessage 'cashiers'}}</span>
       </div>
     </div>
