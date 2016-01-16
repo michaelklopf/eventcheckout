@@ -1,9 +1,23 @@
 <template name="listPage">
-  <li>
-    <h4>
-      <span class="author">{{author}}</span>
-      <span class="date">on {{submitted}}</span>
-    </h4>
-    <p>List Page</p>
-  </li>
+  <h3>List of user {{author}}</h3>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Pos.</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Currency</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each list_items}}
+    <tr>
+      <td>{{position}}</td>
+      <td>{{description}}</td>
+      <td>{{price}}</td>
+      <td>{{unit}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+  </table>
 </template>

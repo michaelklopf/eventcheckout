@@ -93,6 +93,7 @@ if (Events.find().count() === 0) {
     submitted: new Date(now - 5 * 3600 * 1000),
     list_items: [
       {
+        position: 1,
         price: '1',
         unit: 'euro',
         description: 'Stuffed teddy bear',
@@ -100,6 +101,7 @@ if (Events.find().count() === 0) {
         cashierId: ''
       },
       {
+        position: 2,
         price: '2.5',
         unit: 'euro',
         description: 'Sweatshirt',
